@@ -1,7 +1,7 @@
 version: '3'
 services:
-  binder-template:
-    image: binder-template:main
+  semantic-digital-twin:
+    image: semantic-digital-twin:main
     build:
       context: ../
       dockerfile: ./binder/Dockerfile

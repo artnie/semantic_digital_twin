@@ -7,6 +7,14 @@ USER root
 
 # Install python packages
 COPY requirements.txt /tmp/requirements.txt
+RUN apt-get update && apt-get install -y --no-install-recommends \
+#        build-essential \
+        pkg-config \
+        graphviz \
+        libgraphviz-dev \
+#        swig \
+        python3-dev \
+    && rm -rf /var/lib/apt/lists/*
 RUN pip install -r /tmp/requirements.txt
 #===========================================================#
 
